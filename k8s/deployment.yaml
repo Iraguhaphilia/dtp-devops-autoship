@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: autoship
-        image: your-dockerhub-username/dtp-autoship:latest
+        image: daniella2025/dtp-autoship:latest
         ports:
         - containerPort: 3000

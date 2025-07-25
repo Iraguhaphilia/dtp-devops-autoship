@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: autoship-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: autoship
+  template:
+    metadata:
+      labels:
+        app: autoship
+    spec:
+      containers:
+      - name: autoship
+        image: your-dockerhub-username/dtp-autoship:latest
+        ports:
+        - containerPort: 3000
